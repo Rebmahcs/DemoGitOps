@@ -13,7 +13,7 @@ spec:
         app: midpoint
     spec:
       containers:
-        - image: evolveum/midpoint:4.4.4-alpine
+        - image: evolveum/midpoint:4.0.2-alpine
           name: midpoint
           ports:
             - containerPort: 8080
