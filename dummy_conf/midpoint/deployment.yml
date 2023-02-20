@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: midpoint
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: midpoint
+  template:
+    metadata:
+      labels:
+        app: midpoint
+    spec:
+      containers:
+        - image: evolveum/midpoint:4.4.4-alpine
+          name: midpoint
+          ports:
+            - containerPort: 8080
